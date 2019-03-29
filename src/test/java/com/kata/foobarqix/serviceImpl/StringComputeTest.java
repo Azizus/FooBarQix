@@ -49,12 +49,11 @@ public class StringComputeTest {
 	
 	
 	@Test
-	public void should_replace_3_by_Foo_in_digit_order() {
+	public void should_add_Foo_if_number_contains_3() {
 		String value ="3";
 		String expected ="FooFoo";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
 	}
-
 }
