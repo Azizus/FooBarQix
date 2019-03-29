@@ -24,6 +24,8 @@ public class StringCompute {
 					output = output.concat("Bar");
 				if (value.charAt(i) == '7')
 					output = output.concat("Qix");
+				if (value.charAt(i) == '0')
+					output = output.concat("*");
 			} else {
 				if (value.charAt(i) == '3')
 					output = output.replace("3", "Foo");
@@ -31,6 +33,8 @@ public class StringCompute {
 					output = output.replace("5", "Bar");
 				if (value.charAt(i) == '7')
 					output = output.replace("7", "Qix");
+				if (value.charAt(i) == '0')
+					output = output.replace("0", "*");
 			}
 		}
 		return output;
