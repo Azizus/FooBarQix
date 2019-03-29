@@ -47,5 +47,14 @@ public class StringComputeTest {
 		assertThat(result, is(equalTo(expected)));
 	}
 	
+	
+	@Test
+	public void should_replace_3_by_Foo_in_digit_order() {
+		String value ="3";
+		String expected ="FooFoo";
+		
+		String result = stringCompute.compute(value);
+		assertThat(result, is(equalTo(expected)));
+	}
 
 }
