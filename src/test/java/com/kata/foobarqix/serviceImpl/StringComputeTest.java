@@ -56,4 +56,12 @@ public class StringComputeTest {
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
 	}
+	@Test
+	public void should_add_Bar_if_number_contains_5() {
+		String value ="5";
+		String expected ="BarBar";
+		
+		String result = stringCompute.compute(value);
+		assertThat(result, is(equalTo(expected)));
+	}
 }
