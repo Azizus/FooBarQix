@@ -65,4 +65,13 @@ public class StringComputeTest {
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
 	}
+	
+	@Test
+	public void should_add_Qix_if_number_contains_7() {
+		String value ="7";
+		String expected ="QixQix";
+		
+		String result = stringCompute.compute(value);
+		assertThat(result, is(equalTo(expected)));
+	}
 }
