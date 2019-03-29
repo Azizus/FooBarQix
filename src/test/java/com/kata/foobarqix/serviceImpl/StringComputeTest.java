@@ -21,12 +21,14 @@ public class StringComputeTest {
 	}
 
 	@Test
-	public void should_replace_number_by_foo_if_divisible_by_3() {
+	public void should_replace_number_by_Foo_if_divisible_by_3() {
 		String value = "3";
 		String expected = "Foo";
 		String result = stringCompute.compute(value);
 		
 		assertThat(result, is(equalTo(expected)));
 	}
+	
+	
 
 }
