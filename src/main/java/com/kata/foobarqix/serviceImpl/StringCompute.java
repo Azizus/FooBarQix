@@ -22,13 +22,16 @@ public class StringCompute {
 					output = output.concat("Foo");
 				if (value.charAt(i) == '5')
 					output = output.concat("Bar");
+				if (value.charAt(i) == '7')
+					output = output.concat("Qix");
 			} else {
 				if (value.charAt(i) == '3')
 					output = output.replace("3", "Foo");
 				if (value.charAt(i) == '5')
 					output = output.replace("5", "Bar");
+				if (value.charAt(i) == '7')
+					output = output.replace("7", "Qix");
 			}
-
 		}
 		return output;
 	}

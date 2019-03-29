@@ -42,7 +42,7 @@ public class StringComputeTest {
 	@Test
 	public void should_add_Qix_if_number_divisible_by_7() {
 		String value = "7";
-		String expected ="7Qix";
+		String expected ="QixQix";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
@@ -51,16 +51,16 @@ public class StringComputeTest {
 	
 	@Test
 	public void should_add_Foo_if_number_contains_3() {
-		String value ="3";
-		String expected ="FooFoo";
+		String value ="33";
+		String expected ="FooFooFoo";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
 	}
 	@Test
 	public void should_add_Bar_if_number_contains_5() {
-		String value ="5";
-		String expected ="BarBar";
+		String value ="55";
+		String expected ="BarBarBar";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
@@ -68,8 +68,8 @@ public class StringComputeTest {
 	
 	@Test
 	public void should_add_Qix_if_number_contains_7() {
-		String value ="7";
-		String expected ="QixQix";
+		String value ="77";
+		String expected ="QixQixQix";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
