@@ -74,4 +74,14 @@ public class StringComputeTest {
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
 	}
+	
+	@Test
+	public void should_replace_0_by_star_symbol(){
+		String value ="10101";
+		String expected ="FooQix**";
+		
+		String result = stringCompute.compute(value);
+		assertThat(result, is(equalTo(expected)));
+		
+	}
 }
