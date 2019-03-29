@@ -22,7 +22,7 @@ public class StringComputeTest {
 
 	@Test
 	public void should_replace_number_by_foo_if_divisible_by_3() {
-		int value = 3;
+		String value = "3";
 		String expected = "Foo";
 		String result = stringCompute.compute(value);
 		
