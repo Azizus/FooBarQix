@@ -7,7 +7,9 @@ public class StringCompute {
 		if (Integer.parseInt(value) % 3 == 0)
 			output = "Foo";
 		if (Integer.parseInt(value) % 5 == 0)
-			output = value.concat("Bar");
+			output = output.concat("Bar");
+		if (Integer.parseInt(value) % 7 ==0)
+			output = output.concat("Qix");
 		return output;
 	}
 

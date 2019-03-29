@@ -41,7 +41,7 @@ public class StringComputeTest {
 	@Test
 	public void should_add_Qix_if_number_divisible_by_7() {
 		String value = "7";
-		String expected ="7Bar";
+		String expected ="7Qix";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
