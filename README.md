@@ -45,7 +45,7 @@ Nous allons créer un projet maven sur STS 3.9.4.
 Ensuite nous allons implémente la fonction Compute(String) dans une classe StringCompute.
 Le test de la fonction se fera par étape (mentionnée dans les Rules) et ce un utilisant junit 4.
 ## Run 
-'''
+```
 git clone https://github.com/Azizus/FooBarQix.git
 mvn test
-'''
+```
