@@ -23,16 +23,17 @@ public class StringComputeTest {
 	@Test
 	public void should_replace_number_by_Foo_if_divisible_by_3() {
 		String value = "3";
-		String expected = "Foo";
+		String expected = "FooFoo";
 		
 		String result = stringCompute.compute(value);
 		
+		assertThat(result, is(equalTo(expected)));
 	}
 	
 	@Test
 	public void should_add_Bar_if_number_divisible_by_5() {
 		String value = "5";
-		String expected ="5Bar";
+		String expected ="BarBar";
 		
 		String result = stringCompute.compute(value);
 		assertThat(result, is(equalTo(expected)));
