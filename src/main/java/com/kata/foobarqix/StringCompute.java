@@ -2,19 +2,20 @@ package com.kata.foobarqix;
 
 public class StringCompute {
 
-  private IStrategy moduloStrategy;
-  private IStrategy strategy;
+  private IStrategy divisionStrategy;
+  private IStrategy containsStrategy;
 
-  public StringCompute(IStrategy moduloStrategy, IStrategy strategy) {
-    this.moduloStrategy = moduloStrategy;
-    this.strategy = strategy;
+  public StringCompute(IStrategy divisionStrategy, IStrategy containsStrategy) {
+    this.divisionStrategy = divisionStrategy;
+    this.containsStrategy = containsStrategy;
   }
 
   public String compute(String value) {
 
-    String modOutput = StringModulo.mod(value, moduloStrategy.fbrParams());
 
-    String containOutput = StringContains.charContains(value, strategy.fbrParams());
+    String modOutput = divisionStrategy.fbqTreatement(value, divisionStrategy.fbqParams());
+
+    String containOutput = containsStrategy.fbqTreatement(value, containsStrategy.fbqParams());
 
     return modOutput + containOutput;
 

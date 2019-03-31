@@ -12,14 +12,14 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class StringComputeTest {
 
   private StringCompute stringCompute;
-  private IStrategy moduloStrategy;
-  private IStrategy strategy;
+  private IStrategy divisionStrategy;
+  private IStrategy containsStrategy;
 
   @Before
   public void initialize() {
-    strategy = new ContainsStrategy();
-    moduloStrategy = new ModuloStrategy();
-    stringCompute = new StringCompute(moduloStrategy, strategy);
+    containsStrategy = new ContainsStrategy();
+    divisionStrategy = new DivisionStrategy();
+    stringCompute = new StringCompute(divisionStrategy, containsStrategy);
   }
 
   @Test

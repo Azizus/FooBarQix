@@ -4,12 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ContainsStrategy implements IStrategy {
+public class DivisionStrategy implements IStrategy {
 
   @Override
   public Map<Integer, String> fbqParams() {
     Map<Integer, String> foobar = new HashMap<>();
-    foobar.put(0, "*");
     foobar.put(3, "Foo");
     foobar.put(5, "Bar");
     foobar.put(7, "Qix");
@@ -19,14 +18,10 @@ public class ContainsStrategy implements IStrategy {
   @Override
   public String fbqTreatement(String value, Map<Integer, String> fbqParams) {
 
-    return value.chars().filter(c -> fbqParams.containsKey(Character.getNumericValue(c)))
-        .mapToObj(c -> charLoop(Character.getNumericValue(c), fbqParams))
-        .collect(Collectors.joining());
+    String output =
+        fbqParams.entrySet().stream().filter(v -> Integer.parseInt(value) % v.getKey() == 0)
+            .map(v -> v.getValue()).collect(Collectors.joining());
+
+    return output.isEmpty() ? value : output;
   }
-
-  private static String charLoop(int c, Map<Integer, String> foobar) {
-    return foobar.containsKey(c) ? foobar.get(c) : String.valueOf(c);
-  }
-
-
 }
