@@ -12,10 +12,9 @@ public class StringCompute {
 
   public String compute(String value) {
 
+    String modOutput = divisionStrategy.process(value);
 
-    String modOutput = divisionStrategy.fbqTreatement(value, divisionStrategy.fbqParams());
-
-    String containOutput = containsStrategy.fbqTreatement(value, containsStrategy.fbqParams());
+    String containOutput = containsStrategy.process(value);
 
     return modOutput + containOutput;
 

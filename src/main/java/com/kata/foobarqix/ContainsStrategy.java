@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 
 public class ContainsStrategy implements IStrategy {
 
-  @Override
-  public Map<Integer, String> fbqParams() {
+
+  private Map<Integer, String> fbqParams() {
     Map<Integer, String> foobar = new HashMap<>();
     foobar.put(0, "*");
     foobar.put(3, "Foo");
@@ -17,8 +17,9 @@ public class ContainsStrategy implements IStrategy {
   }
 
   @Override
-  public String fbqTreatement(String value, Map<Integer, String> fbqParams) {
+  public String process(String value) {
 
+    Map<Integer, String> fbqParams = fbqParams();
     return value.chars().filter(c -> fbqParams.containsKey(Character.getNumericValue(c)))
         .mapToObj(c -> charLoop(Character.getNumericValue(c), fbqParams))
         .collect(Collectors.joining());
