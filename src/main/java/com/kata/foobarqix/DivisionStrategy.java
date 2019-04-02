@@ -1,7 +1,8 @@
 package com.kata.foobarqix;
 
+import static java.lang.Integer.parseInt;
+import static java.util.stream.Collectors.joining;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class DivisionStrategy implements IStrategy {
   private Map<Integer, String> fbqParams;
@@ -12,9 +13,10 @@ public class DivisionStrategy implements IStrategy {
 
   @Override
   public String process(String value) {
-    String output =
-        fbqParams.entrySet().stream().filter(v -> Integer.parseInt(value) % v.getKey() == 0)
-            .map(v -> v.getValue()).collect(Collectors.joining());
+    String output = fbqParams.entrySet().stream() //
+        .filter(e -> parseInt(value) % e.getKey() == 0) //
+        .map(e -> e.getValue()) //
+        .collect(joining());
 
     return output.isEmpty() ? value : output;
   }
