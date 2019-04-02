@@ -5,7 +5,7 @@ import static java.lang.String.valueOf;
 import static java.util.stream.Collectors.joining;
 import java.util.Map;
 
-public class ContainsStrategy implements IStrategy {
+public class ContainsStrategy implements IFooBarQixStrategy {
 
   private Map<Integer, String> fbqParams;
 
@@ -14,7 +14,7 @@ public class ContainsStrategy implements IStrategy {
   }
 
   @Override
-  public String process(String value) {
+  public String compute(String value) {
     return value.chars() //
         .filter(c -> fbqParams.containsKey(getNumericValue(c))) //
         .mapToObj(c -> charLoop(getNumericValue(c), fbqParams)) //

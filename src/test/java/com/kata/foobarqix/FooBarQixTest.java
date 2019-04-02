@@ -14,8 +14,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class FooBarQixTest {
 
   private FooBarQix fooBarQix;
-  private IStrategy divisionStrategy;
-  private IStrategy containsStrategy;
+  private IFooBarQixStrategy divisionStrategy;
+  private IFooBarQixStrategy containsStrategy;
 
   @Before
   public void initialize() {
