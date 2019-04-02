@@ -1,6 +1,6 @@
 package com.kata.foobarqix;
 
-public enum FooBarQixDivisionParams {
+public enum FooBarQixDivisionParams implements IFooBarQixParams {
 
   FOO(3, "Foo"), //
   BAR(5, "Bar"), //
@@ -20,9 +20,5 @@ public enum FooBarQixDivisionParams {
 
   public int getValue() {
     return value;
-  }
-
-  public static FooBarQixDivisionParams[] entrySet() {
-    return values();
   }
 }

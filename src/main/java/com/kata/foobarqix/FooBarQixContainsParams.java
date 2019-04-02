@@ -1,8 +1,6 @@
 package com.kata.foobarqix;
 
-import static java.util.Arrays.stream;
-
-public enum FooBarQixContainsParams {
+public enum FooBarQixContainsParams implements IFooBarQixParams {
 
   STAR(0, "*"), //
   FOO(3, "Foo"), //
@@ -17,17 +15,12 @@ public enum FooBarQixContainsParams {
     this.label = label;
   }
 
-  public static boolean containsKey(int value) {
-    return stream(values()) //
-        .anyMatch(p -> p.value == value);
+  public String getLabel() {
+    return label;
   }
 
-  public static String get(int value) {
-    return stream(values()) //
-        .filter(p -> p.value == value) //
-        .findFirst() //
-        .map(p -> p.label) //
-        .orElse(null);
+  public int getValue() {
+    return value;
   }
 
 }

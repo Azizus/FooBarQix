@@ -3,13 +3,13 @@ package com.kata.foobarqix.strategy;
 import static java.lang.Integer.parseInt;
 import static java.util.stream.Collectors.joining;
 import java.util.Arrays;
-import com.kata.foobarqix.FooBarQixDivisionParams;
+import com.kata.foobarqix.FooBarQixParams;
 
 public class DivisionStrategy implements IFooBarQixStrategy {
 
   @Override
   public String compute(String value) {
-    String output = Arrays.stream(FooBarQixDivisionParams.entrySet()) //
+    String output = Arrays.stream(FooBarQixParams.entrySet()) //
         .filter(e -> parseInt(value) % e.getValue() == 0) //
         .map(e -> e.getLabel()) //
         .collect(joining());
