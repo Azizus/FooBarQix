@@ -9,8 +9,15 @@ public class FooBarQix {
   private FooBarQixStrategies fooBarQixStrategies;
 
   public FooBarQix() {
-    ContainsStrategy containsStrategy = new ContainsStrategy();
-    DivisionStrategy divisionStrategy = new DivisionStrategy();
+    FooBarQixParams<ContainsParams> containsParams =
+        new FooBarQixParams<>(ContainsParams.class);
+    ContainsStrategy containsStrategy = new ContainsStrategy(containsParams);
+
+
+    FooBarQixParams<DivisionParams> divisionParams =
+        new FooBarQixParams<>(DivisionParams.class);
+    DivisionStrategy divisionStrategy = new DivisionStrategy(divisionParams);
+
     fooBarQixStrategies = new FooBarQixStrategies(divisionStrategy, containsStrategy);
   }
 

@@ -1,6 +1,6 @@
 package com.kata.foobarqix;
 
-public enum FooBarQixContainsParams implements IFooBarQixParams {
+public enum ContainsParams implements IFooBarQixParams {
 
   STAR(0, "*"), //
   FOO(3, "Foo"), //
@@ -10,7 +10,7 @@ public enum FooBarQixContainsParams implements IFooBarQixParams {
   private int value;
   private String label;
 
-  private FooBarQixContainsParams(int value, String label) {
+  private ContainsParams(int value, String label) {
     this.value = value;
     this.label = label;
   }
@@ -22,5 +22,4 @@ public enum FooBarQixContainsParams implements IFooBarQixParams {
   public int getValue() {
     return value;
   }
-
 }
