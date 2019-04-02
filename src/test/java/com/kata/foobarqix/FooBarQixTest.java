@@ -20,12 +20,20 @@ public class FooBarQixTest {
   @Before
   public void initialize() {
 
+
+    Map<Integer, String> foobarContains = new HashMap<>();
+    foobarContains.put(0, "*");
+    foobarContains.put(3, "Foo");
+    foobarContains.put(5, "Bar");
+    foobarContains.put(7, "Qix");
+
+
     Map<Integer, String> foobar = new HashMap<>();
     foobar.put(3, "Foo");
     foobar.put(5, "Bar");
     foobar.put(7, "Qix");
 
-    containsStrategy = new ContainsStrategy();
+    containsStrategy = new ContainsStrategy(foobarContains);
     divisionStrategy = new DivisionStrategy(foobar);
     fooBarQix = new FooBarQix(divisionStrategy, containsStrategy);
   }
