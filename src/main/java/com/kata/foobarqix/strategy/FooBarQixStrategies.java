@@ -10,8 +10,8 @@ public class FooBarQixStrategies implements IFooBarQixStrategy {
 
   public String compute(String value) {
     String output = "";
-    for (IFooBarQixStrategy fooBarQixStrategy : fooBarQixStrategies) {
-      output += fooBarQixStrategy.compute(value);
+    for (IFooBarQixStrategy strategy : fooBarQixStrategies) {
+      output += strategy.compute(value);
     }
 
     return output;

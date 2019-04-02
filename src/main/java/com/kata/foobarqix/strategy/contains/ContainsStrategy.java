@@ -1,10 +1,10 @@
-package com.kata.foobarqix.strategy;
+package com.kata.foobarqix.strategy.contains;
 
 import static java.lang.Character.getNumericValue;
 import static java.lang.String.valueOf;
 import static java.util.stream.Collectors.joining;
-import com.kata.foobarqix.ContainsParams;
-import com.kata.foobarqix.FooBarQixParams;
+import com.kata.foobarqix.strategy.FooBarQixParams;
+import com.kata.foobarqix.strategy.IFooBarQixStrategy;
 
 public class ContainsStrategy implements IFooBarQixStrategy {
 

@@ -1,8 +1,11 @@
 package com.kata.foobarqix;
 
-import com.kata.foobarqix.strategy.ContainsStrategy;
-import com.kata.foobarqix.strategy.DivisionStrategy;
+import com.kata.foobarqix.strategy.FooBarQixParams;
 import com.kata.foobarqix.strategy.FooBarQixStrategies;
+import com.kata.foobarqix.strategy.contains.ContainsParams;
+import com.kata.foobarqix.strategy.contains.ContainsStrategy;
+import com.kata.foobarqix.strategy.division.DivisionParams;
+import com.kata.foobarqix.strategy.division.DivisionStrategy;
 
 public class FooBarQix {
 

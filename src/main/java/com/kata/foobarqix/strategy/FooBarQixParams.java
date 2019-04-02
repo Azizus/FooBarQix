@@ -1,8 +1,8 @@
-package com.kata.foobarqix;
+package com.kata.foobarqix.strategy;
 
 import static java.util.Arrays.stream;
 
-public class FooBarQixParams<E extends IFooBarQixParams> {
+public class FooBarQixParams<E extends IStrategyParameter> {
 
   private Class<E> paramsClass;
 

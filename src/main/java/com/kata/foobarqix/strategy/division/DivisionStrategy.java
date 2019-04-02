@@ -1,10 +1,10 @@
-package com.kata.foobarqix.strategy;
+package com.kata.foobarqix.strategy.division;
 
 import static java.lang.Integer.parseInt;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
-import com.kata.foobarqix.DivisionParams;
-import com.kata.foobarqix.FooBarQixParams;
+import com.kata.foobarqix.strategy.FooBarQixParams;
+import com.kata.foobarqix.strategy.IFooBarQixStrategy;
 
 public class DivisionStrategy implements IFooBarQixStrategy {
 

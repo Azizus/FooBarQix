@@ -1,7 +1,10 @@
-package com.kata.foobarqix;
+package com.kata.foobarqix.strategy.contains;
 
-public enum DivisionParams implements IFooBarQixParams {
+import com.kata.foobarqix.strategy.IStrategyParameter;
 
+public enum ContainsParams implements IStrategyParameter {
+
+  STAR(0, "*"), //
   FOO(3, "Foo"), //
   BAR(5, "Bar"), //
   QIX(7, "Qix");
@@ -9,7 +12,7 @@ public enum DivisionParams implements IFooBarQixParams {
   private int value;
   private String label;
 
-  private DivisionParams(int value, String label) {
+  private ContainsParams(int value, String label) {
     this.value = value;
     this.label = label;
   }
