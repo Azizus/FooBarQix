@@ -1,3 +1,4 @@
+
 package com.kata.foobarqix.strategy;
 
 import static java.util.Arrays.stream;

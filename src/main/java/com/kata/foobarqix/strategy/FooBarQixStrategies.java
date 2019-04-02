@@ -1,5 +1,8 @@
 package com.kata.foobarqix.strategy;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class FooBarQixStrategies implements IFooBarQixStrategy {
 
   private IFooBarQixStrategy[] fooBarQixStrategies;
@@ -9,11 +12,9 @@ public class FooBarQixStrategies implements IFooBarQixStrategy {
   }
 
   public String compute(String value) {
-    String output = "";
-    for (IFooBarQixStrategy strategy : fooBarQixStrategies) {
-      output += strategy.compute(value);
-    }
+    return Arrays.stream(fooBarQixStrategies)//
+        .map(strategy -> strategy.compute(value))//
+        .collect(Collectors.joining());
 
-    return output;
   }
 }
