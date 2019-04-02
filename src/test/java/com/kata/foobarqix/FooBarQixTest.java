@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class StringComputeTest {
+public class FooBarQixTest {
 
   private FooBarQix fooBarQix;
   private IStrategy divisionStrategy;

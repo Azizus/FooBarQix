@@ -2,20 +2,18 @@ package com.kata.foobarqix;
 
 public class FooBarQix {
 
-  private IStrategy divisionStrategy;
-  private IStrategy containsStrategy;
+  private IStrategy[] strategies;
 
-  public FooBarQix(IStrategy divisionStrategy, IStrategy containsStrategy) {
-    this.divisionStrategy = divisionStrategy;
-    this.containsStrategy = containsStrategy;
+  public FooBarQix(IStrategy... strategy) {
+    this.strategies = strategy;
   }
 
   public String compute(String value) {
+    String output = "";
+    for (IStrategy strategy : strategies) {
+      output += strategy.process(value);
+    }
 
-    String modOutput = divisionStrategy.process(value);
-
-    String containOutput = containsStrategy.process(value);
-
-    return modOutput + containOutput;
+    return output;
   }
 }
