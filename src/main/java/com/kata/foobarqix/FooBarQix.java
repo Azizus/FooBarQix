@@ -1,11 +1,11 @@
 package com.kata.foobarqix;
 
-public class StringCompute {
+public class FooBarQix {
 
   private IStrategy divisionStrategy;
   private IStrategy containsStrategy;
 
-  public StringCompute(IStrategy divisionStrategy, IStrategy containsStrategy) {
+  public FooBarQix(IStrategy divisionStrategy, IStrategy containsStrategy) {
     this.divisionStrategy = divisionStrategy;
     this.containsStrategy = containsStrategy;
   }
@@ -17,10 +17,5 @@ public class StringCompute {
     String containOutput = containsStrategy.process(value);
 
     return modOutput + containOutput;
-
-
   }
-
-
-
 }
