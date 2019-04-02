@@ -2,20 +2,16 @@ package com.kata.foobarqix.strategy;
 
 import static java.lang.Integer.parseInt;
 import static java.util.stream.Collectors.joining;
-import java.util.Map;
+import java.util.Arrays;
+import com.kata.foobarqix.FooBarQixDivisionParams;
 
 public class DivisionStrategy implements IFooBarQixStrategy {
-  private Map<Integer, String> fbqParams;
-
-  public DivisionStrategy(Map<Integer, String> fbqParams) {
-    this.fbqParams = fbqParams;
-  }
 
   @Override
   public String compute(String value) {
-    String output = fbqParams.entrySet().stream() //
-        .filter(e -> parseInt(value) % e.getKey() == 0) //
-        .map(e -> e.getValue()) //
+    String output = Arrays.stream(FooBarQixDivisionParams.entrySet()) //
+        .filter(e -> parseInt(value) % e.getValue() == 0) //
+        .map(e -> e.getLabel()) //
         .collect(joining());
 
     return output.isEmpty() ? value : output;
