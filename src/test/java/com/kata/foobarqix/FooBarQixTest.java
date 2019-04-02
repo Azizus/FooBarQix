@@ -3,6 +3,8 @@ package com.kata.foobarqix;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import java.util.HashMap;
+import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,8 +19,14 @@ public class FooBarQixTest {
 
   @Before
   public void initialize() {
+
+    Map<Integer, String> foobar = new HashMap<>();
+    foobar.put(3, "Foo");
+    foobar.put(5, "Bar");
+    foobar.put(7, "Qix");
+
     containsStrategy = new ContainsStrategy();
-    divisionStrategy = new DivisionStrategy();
+    divisionStrategy = new DivisionStrategy(foobar);
     fooBarQix = new FooBarQix(divisionStrategy, containsStrategy);
   }
 

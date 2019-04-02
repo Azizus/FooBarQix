@@ -1,24 +1,17 @@
 package com.kata.foobarqix;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class DivisionStrategy implements IStrategy {
+  private Map<Integer, String> fbqParams;
 
-
-  private Map<Integer, String> fbqParams() {
-    Map<Integer, String> foobar = new HashMap<>();
-    foobar.put(3, "Foo");
-    foobar.put(5, "Bar");
-    foobar.put(7, "Qix");
-    return foobar;
+  public DivisionStrategy(Map<Integer, String> fbqParams) {
+    this.fbqParams = fbqParams;
   }
 
   @Override
   public String process(String value) {
-
-    Map<Integer, String> fbqParams = fbqParams();
     String output =
         fbqParams.entrySet().stream().filter(v -> Integer.parseInt(value) % v.getKey() == 0)
             .map(v -> v.getValue()).collect(Collectors.joining());
