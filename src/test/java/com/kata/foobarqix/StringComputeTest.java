@@ -11,7 +11,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class StringComputeTest {
 
-  private StringCompute stringCompute;
+  private FooBarQix fooBarQix;
   private IStrategy divisionStrategy;
   private IStrategy containsStrategy;
 
@@ -19,14 +19,14 @@ public class StringComputeTest {
   public void initialize() {
     containsStrategy = new ContainsStrategy();
     divisionStrategy = new DivisionStrategy();
-    stringCompute = new StringCompute(divisionStrategy, containsStrategy);
+    fooBarQix = new FooBarQix(divisionStrategy, containsStrategy);
   }
 
   @Test
   public void should_replace_number_by_Foo_if_divisible_by_3() {
     String value = "3";
     String expected = "FooFoo";
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
 
     assertThat(result, is(equalTo(expected)));
   }
@@ -36,7 +36,7 @@ public class StringComputeTest {
   public void should_replace_number_by_FooBar_if_divisible_by_3() {
     String value = "35";
     String expected = "BarQixFooBar";
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
 
     assertThat(result, is(equalTo(expected)));
   }
@@ -46,7 +46,7 @@ public class StringComputeTest {
     String value = "5";
     String expected = "BarBar";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
   }
 
@@ -55,7 +55,7 @@ public class StringComputeTest {
     String value = "7";
     String expected = "QixQix";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
   }
 
@@ -64,7 +64,7 @@ public class StringComputeTest {
     String value = "33";
     String expected = "FooFooFoo";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
   }
 
@@ -73,7 +73,7 @@ public class StringComputeTest {
     String value = "55";
     String expected = "BarBarBar";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
   }
 
@@ -82,7 +82,7 @@ public class StringComputeTest {
     String value = "77";
     String expected = "QixQixQix";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
   }
 
@@ -93,10 +93,10 @@ public class StringComputeTest {
     String value2 = "105";
     String expected2 = "FooBarQix*Bar";
 
-    String result = stringCompute.compute(value);
+    String result = fooBarQix.compute(value);
     assertThat(result, is(equalTo(expected)));
 
-    String result2 = stringCompute.compute(value2);
+    String result2 = fooBarQix.compute(value2);
     assertThat(result2, is(equalTo(expected2)));
   }
 
