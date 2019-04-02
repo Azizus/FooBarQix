@@ -1,4 +1,4 @@
-package com.kata.foobarqix;
+package com.kata.foobarqix.strategy;
 
 import static java.lang.Integer.parseInt;
 import static java.util.stream.Collectors.joining;

@@ -1,4 +1,4 @@
-package com.kata.foobarqix;
+package com.kata.foobarqix.strategy;
 
 public interface IFooBarQixStrategy {
 

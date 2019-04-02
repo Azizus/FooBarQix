@@ -2,6 +2,9 @@ package com.kata.foobarqix;
 
 import java.util.HashMap;
 import java.util.Map;
+import com.kata.foobarqix.strategy.ContainsStrategy;
+import com.kata.foobarqix.strategy.DivisionStrategy;
+import com.kata.foobarqix.strategy.FooBarQixStrategies;
 
 public class FooBarQix {
 
