@@ -1,10 +1,10 @@
 package com.kata.foobarqix;
 
-public class FooBarQix {
+public class FooBarQixStrategies implements IFooBarQixStrategy {
 
   private IFooBarQixStrategy[] fooBarQixStrategies;
 
-  public FooBarQix(IFooBarQixStrategy... strategy) {
+  public FooBarQixStrategies(IFooBarQixStrategy... strategy) {
     this.fooBarQixStrategies = strategy;
   }
 

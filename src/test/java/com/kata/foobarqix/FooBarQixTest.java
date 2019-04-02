@@ -3,9 +3,6 @@ package com.kata.foobarqix;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import java.util.HashMap;
-import java.util.Map;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -13,30 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class FooBarQixTest {
 
-  private FooBarQix fooBarQix;
-  private IFooBarQixStrategy divisionStrategy;
-  private IFooBarQixStrategy containsStrategy;
-
-  @Before
-  public void initialize() {
-
-
-    Map<Integer, String> foobarContains = new HashMap<>();
-    foobarContains.put(0, "*");
-    foobarContains.put(3, "Foo");
-    foobarContains.put(5, "Bar");
-    foobarContains.put(7, "Qix");
-
-
-    Map<Integer, String> foobar = new HashMap<>();
-    foobar.put(3, "Foo");
-    foobar.put(5, "Bar");
-    foobar.put(7, "Qix");
-
-    containsStrategy = new ContainsStrategy(foobarContains);
-    divisionStrategy = new DivisionStrategy(foobar);
-    fooBarQix = new FooBarQix(divisionStrategy, containsStrategy);
-  }
+  private FooBarQix fooBarQix = new FooBarQix();
 
   @Test
   public void should_replace_number_by_Foo_if_divisible_by_3() {
