@@ -23,5 +23,4 @@ public class DivisionStrategy implements IFooBarQixStrategy {
 
     return output.isEmpty() ? value : output;
   }
-
 }
